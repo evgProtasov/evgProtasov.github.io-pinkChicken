@@ -1,0 +1,127 @@
+.header {
+    padding: 33px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-navbar {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+    }
+}
+
+.navbar {
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+
+        & p a {
+            color: $colorText;
+            font-size: $fsMedium;
+            font-weight: $fwBold;
+        }
+        
+    }
+    &-buttons {
+        display: flex;
+        gap: 12px;
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        & a span {
+            display: none;
+        }
+    }
+    
+}
+.info {
+
+    &-img {
+        background-color: $colorPink;
+    }
+}
+
+.button {
+    &-img {
+        background-color: $bgSections;
+    }
+}
+
+@media (max-width: 816px) {
+    .header {
+        &-navbar {
+            gap: 20px;
+        }
+        &-logo {
+            max-width: 209px;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+    .navbar-info p a {
+        font-size: $fsNormal;
+    }
+    .navbar-info {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 740px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+
+        &-navbar {
+            gap: 0px;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        &-logo {
+            max-width: 181px;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+    .button-img {
+        background-color: $bgBody;
+    }
+    .navbar-info {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+    }
+    .navbar-info .navbar-revenue img {
+        display: none;
+    }
+    .navbar-info .navbar-user img {
+        display: none;
+    }
+    .navbar-info .navbar-revenue a {
+        display: flex;
+        color: #797979;
+        font-size: $fsLittle;        
+    }
+    .navbar-user {
+        order: 1;
+    }
+    .navbar-revenue {
+        order: 2;
+    }
+    .navbar-info .navbar-revenue a span {
+        display: block;
+    }
+}

@@ -1,0 +1,140 @@
+@import '_fonts.scss';
+@import '_reset.scss';
+@import '_variables.scss';
+@import '_header.scss';
+@import '_files.scss';
+@import '_assistant.scss';
+@import '_footer.scss';
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: $bgBody;    
+}
+
+
+
+.container {
+    max-width: 1220px;
+    padding: 0px 10px;
+    margin: 0 auto;
+}
+
+.img {
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.main-content {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.main-title {
+    font-size: $fsLarge;
+    font-weight: $fwBold;
+}
+
+.subtitle {
+    font-size: $fsMedium;
+    font-weight: $fwBold;
+}
+
+.arrow {
+    background: url('../img/arrow.svg') no-repeat;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    cursor: pointer;
+}
+.arrow--rotate {
+    transform: rotate(180deg);
+}
+
+.block {
+    border-radius: 20px;
+}
+
+.none {
+    display: none !important;
+}
+
+.chat-field--border {
+    border: 2px solid $colorPink;
+}
+
+.button {
+    padding: 12px 22px;
+    border-radius: 21px;
+    color: $bgSections;
+    font-size: $fsNormal;
+    font-weight: $fwBold;
+    cursor: pointer;
+}
+
+.content {
+    max-width: 541px;
+    width: 100%;
+    background-color: $bgSections;
+    color: $colorText;
+    padding: 16px 22px;
+    border-radius: 12px;
+    font-weight: $fwMedium;
+    font-size: $fsNormal;
+}
+
+@media (max-width: 1010px) {
+    .container {
+        padding: 0px 40px;
+    }
+    .main-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .files {
+        max-width: 930px;
+        padding: 30px 20px;
+
+        &-block {
+            gap: 20px;
+        }
+
+        &-stub {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 19px;
+            padding-top: 0px;
+        }
+    }
+
+    .stub {
+
+        &-text {
+            max-width: 255px;
+            text-align: start;
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .content {
+        max-width: 454px;
+    }
+}
+
+@media (max-width: 740px) {
+    body {
+        background-color: $bgSections !important;
+    }
+    .block {
+        border-radius: 0;
+    }
+    .container {
+        padding: 0px 20px;
+    }
+}
